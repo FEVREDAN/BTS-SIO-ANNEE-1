@@ -1,0 +1,41 @@
+Exercice sur la loi binomiale :
+
+1. Est-ce qu'il s'agit d'un application de la loi binomiale ?
+
+- Oui la méthodologie indique que nous allons répertorié deux événements (satisfaits et non satisfaits) qui, de plus sont des expériences identiques (on va poser la même question à toutes les personnes) et indépendantes (dans la mesure où la réponse d'une personne n'influence pas la réponse d'une autre personne). 
+
+2. Probabilités
+
+- Personnes insastisfaites : 0.07
+- Personnes satisfaites : 0.93
+
+3. représentation de la loi binomiale : B(25, 0.07)
+
+4. Calculs
+
+- Espérance : E(x) = p = 0.07
+- Variance : V(x) = n * p * (1-p) = n * p * q = 25 * 0.07 * 0.93 =  1.6275
+- Ecart-type : racine(V(x)) = racine(1,6275) = 1.28
+
+5. 3 personnes non satisfaites :
+
+- P(X=3) = 0.176
+
+6. Au moins deux personnes non satisfaites :
+
+- P(X >= 2) = 1 - P(X < 2) = 1 - 0.43 = 0.57
+
+7. Entre 2 et 6 personnes non satisfaites :
+
+- P(2 <= X <= 6) = P(X=2) + P(X=3) + P(X=4) + P(X=5) + P(X=6) 
+
+8. Déterminer la taille de l'échantillon :
+
+- P(X=0) = 0.1 donc C p^k.(1-p)^n-k = 0.1 avec k = 0 
+
+donc C 1.(1-0.07)^n = 0.1 
+donc C 0.93^n = 0.1   C0n vaut toujours 1 (nombre de combinaisons qui font 0 succès parmi n épreuves). 
+donc 0.93^n = 0.1
+ln 0.93^n = ln 0.1
+n = ln 0.1/ ln 0.93
+n = 32

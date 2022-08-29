@@ -1,0 +1,33 @@
+1. Probabilité de poulet
+
+- bas de gamme : P(x < 1300) => P(X < (1300- 1500)/200) = P(X < -1)
+	On ramène la probabilité à un cas connu dans la table : P( X < -1) = 1 - P(X < 1)
+	Je cherche P(X < 1) dans la table de la loi normale et j'obtiens :
+	P( X < -1) = 1 - 0.8413 = 0.1587 (15,87%)
+
+- haut de gamme : P(1750 < x) => P((1750 -1500) /200 < X) = P(1.25 < X)
+	On ramène la probabilité à un cas connus dans la table : P(1.25 < x) = 1 - P(x < 1.25)
+	Je cherche P(X < 1.25) dans la table de la loi normale et j'obtiens :
+	P( X < 1.25) = 1 - 0.8944 = 0.1056 (10,56%)
+
+- moyen gamme : P(1300 < x < 1750) =>  P((1300- 1500)/200 < X < (1750 -1500) /200) = P(-1 < X < 1.25)
+	Le calibre moyen c'est finalement l'ensemble des poulets - les bas de gamme - les hauts de gamme
+	P(-1 < X < 1.25) = 1 - P(X < -1) - P(X > 1.25)
+	Nous avons calculé ces 2 probabilité au dessus :
+	P(-1 < X < 1.25) = 1 - 0.1587 - 0.1056 = 0.7357 (73,57%)
+	
+2. Calcul du chiffre d'affaire :
+
+- CA des poulets haut de gamme = 450 * 0.1056 * 12 = 570.24
+- CA des poulets moyens = 450 * 0.7357 * 10 = 3310.65
+- CA des poulets bas de gamme = 450 * 0.1587 * 8 = 571.32
+
+- CA total = 4452.21 euros
+
+3. Les poulets les plus lourds
+
+- P(X > poids_min) = 0.05 donc P(X < poids_min) = 0.95
+	En effectuant une lecture inverse de la table on trouve que P(x < 1,64) = 0.95.
+	Cette valeur a été trouvée pour la loi normale centrée réduite. Il faut donc replacer cette valeur dans la loi d'origine N(1500, 200).
+	P(x < (1,64 * 200) + 1500) = 0.95 = P(x < 1828).
+	Les 5% des poulets les plus lourds ont donc un poids de 1828g au minimum.

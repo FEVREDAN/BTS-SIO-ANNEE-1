@@ -1,0 +1,15 @@
+fonction donneEcart(l : tableau de couple(x, y), a : réel, b : réel) : réel
+Variable locale :
+	somme : réel
+	y_droite : réel
+Début
+
+	somme <- 0
+
+	pour chaque e dans l Faire 
+		y_droite = a * e.x + b
+		somme <- somme + (y_droite - e.y)**2		
+	fait
+
+	retour <- somme
+Fin
