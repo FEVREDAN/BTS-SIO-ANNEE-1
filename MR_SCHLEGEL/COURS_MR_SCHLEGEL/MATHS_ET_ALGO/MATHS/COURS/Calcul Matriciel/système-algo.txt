@@ -1,0 +1,30 @@
+#Génération de matrice identité
+Variables :
+	m1[n][m] : Décimaux
+	n : entier
+
+Début
+	pour i de 0 à n-1
+		pour j de 0 à n-1
+			si j = i alors
+				m1[i][j] <- 1
+			sinon
+				m1[i][j] <- 0
+			fsi
+		fpour
+	fpour	
+Fin
+
+# Test de matrice inverse
+Variables :
+	m1[n][m] : Décimaux
+	m2[n][m] : Décimaux
+
+Début
+	si multiplication_matrice(m1, m2) = matrice_identité(taille(m1)) alors
+		Ecrire "Les deux matrices sont inverses l'une de l'autre"
+	sinon
+		Ecrire "Nous ne sommes pas en présence de matrices inverses"
+	Fsi
+Fin
+

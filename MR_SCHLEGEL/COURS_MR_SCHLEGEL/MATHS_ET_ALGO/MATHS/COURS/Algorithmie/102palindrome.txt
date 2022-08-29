@@ -1,0 +1,17 @@
+Déclaration
+	Caractère : mot['l', 'a', 'v', 'a', 'l']
+	Booleen : estPalin
+Début
+	estPalin = Vrai
+	pour i de 0 à taille(mot) / 2
+		si mot[i] <> mot[taille(mot)-1-i] alors
+			estPalin = Faux
+		fsi
+	fpour
+
+	si estPalin alors
+		Ecrire "C'est un palindrome"
+	sinon
+		Ecrire "Ce n'est pas un palindrome"
+	fsi
+Fin

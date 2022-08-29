@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Un petit formulaire</title>
+    </head>
+    <body>
+        <!-- Ceci est un commentaire -->
+        <H1>On va faire un formulaire</H1>
+        <form>
+            <fieldset>
+                <legend>Informations privées</legend>
+                <select>
+                    <option>Madame</option>
+                    <option>Monsieur</option>
+                </select>
+                <p>
+                    <label>Nom</label>
+                    <input type="text"></input>
+                </p>
+                <p>
+                    <label>Prénom</label>
+                    <input type="text"></input>
+                </p>
+                <p>
+                    <label>Mot de passe</label>
+                    <input type="password"></input>
+                </p>
+                <p>
+                    <label>Adresse Mail</label>
+                    <input type="email"></input>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Quelles sont vos hobbies ?</legend>
+                <p>
+                    <input type="checkbox" name="Lecture" /><label for="Lecture">Lecture</label>
+                    <input type="checkbox" name="Sport" /><label for="Sport">Sport</label>
+                    <input type="checkbox" name="Vidéo" /><label for="Vidéo">Jeux vidéos</label>
+                    <input type="checkbox" name="Dormir" /><label for="Dormir">Dormir</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Quelle est votre plus grande qualité ?</legend>
+                <p>
+                    <input type="radio" name="qualite" value="Générosité" /><label for="Générosité">Lecture</label>
+                    <input type="radio" name="qualite" value="Modestie" /><label for="Modestie">Sport</label>
+                    <input type="radio" name="qualite" value="Ponctualité" /><label for="Ponctualité">Jeux vidéos</label>
+                    <input type="radio" name="qualite" value="Perfection" /><label for="Perfection">Dormir</label>
+                </p>
+            </fieldset>
+            <input type="submit" value="Valider" />
+        </form>
+    </body>
+</html>

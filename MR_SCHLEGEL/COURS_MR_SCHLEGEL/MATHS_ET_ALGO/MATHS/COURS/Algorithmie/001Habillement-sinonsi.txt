@@ -1,0 +1,25 @@
+Déclaration
+	Entier : température
+	Chaine de caractères : état_du_temps // 'beau', 'couvert', 'pluie'
+Début
+
+	Si état_du_temps = 'beau' alors
+		Si température < 0 alors
+			Ecrire "Bandeau"
+		Sinon Si 0 <= température < 25 alors
+			Ecrire "Pull"	
+		Sinon
+			Ecrire "Chapeau"
+		Fsi
+	Sinon
+		Ecrire "Parapluie"
+		Si température < 0 alors
+			Ecrire "Imperméable, bonnet en laine"
+		Sinon Si 0 <= température < 25 alors
+			Ecrire "Pull, imperméable"
+		Sinon
+			Ecrire "Pull"
+		Fsi
+	Fsi
+Fin
+

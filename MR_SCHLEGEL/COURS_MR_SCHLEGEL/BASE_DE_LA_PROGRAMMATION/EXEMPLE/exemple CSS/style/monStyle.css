@@ -1,0 +1,76 @@
+
+body {
+    background-image : url(../images/DSC00092.JPG);
+    background-size : 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+@font-face {
+    font-family: 'dragon';
+    src:url(../fonts/Hello\ Bride\ Script.ttf) format('truetype'); 
+}
+
+h1{
+    color:rgba(68, 93, 28); 
+    font-size: 3em;
+    font-family: 'dragon';
+    text-decoration: underline;
+    text-align : center;
+    opacity:0.7;
+    border-width: 2px;
+    border-color: #6f00ff;
+    border-style: double;
+    border-radius: 200px;
+}
+p {
+    background-color: rgb(102, 20, 20);
+    text-align : justify;
+    box-shadow: 6px 6px 0px black ;
+}
+
+h2, em{
+    color:red;
+    font-size: 2em;
+    text-decoration: underline;
+    text-align : left;
+}
+
+h3{
+    text-align: right;
+}
+
+#titrePrincipal{color:rgb(240, 15, 15);}
+#para2et3 {color:chartreuse}
+
+.premierPara {color:blueviolet;}
+
+.programmation {color:black}
+
+.Auteur{
+    font-size: 10em;
+    font-style: italic;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.ewing {
+    float :left;
+    width: 200px;
+    height: 200px;
+}
+
+.lien {
+    color: rgba(0, 128, 0, 0.863);
+    border-width: 2px;
+    border-radius: 200px;
+}
+
+.lien:hover{
+    background-color: rgb(128, 0, 0);
+    border-width: 4px;
+    border-radius: 400px;
+}

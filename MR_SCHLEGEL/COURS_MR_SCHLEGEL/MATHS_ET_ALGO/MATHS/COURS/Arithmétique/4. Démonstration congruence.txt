@@ -1,0 +1,38 @@
+--> a + c coingrue a b + d[n]
+
+a-b = n.k1
+c-d = n.k2
+
+a-b + c -d = n.k1 + n.k2
+a+c - (b+d) = n.(k1 + k2)
+
+--> pa congru pb[n]
+
+a - b = n.k
+
+p(a-b) = p.n.k
+p.a - p.b = n.(p.k)
+
+--> ac congru bd [n]
+
+a-b = n.k1 --> a = n.k1 + b
+c-d = n.k2 --> c = n.k2 + d
+
+a.c = (n.k1 + b) * (n.k2 + d)
+a.c - b.d = n(n.k1.k2 + k2.b + k1.d)
+
+--> a^p  congru b^p [n]
+
+Récursivité, un élément puis a partir d'un élément le suivant
+
+Element 1 : p = 1 a congru à b[n]
+
+considérons que pour p on a : a^p congru b^p [n]
+
+a^(p+1) = a * a^p
+b^(p+1) = b * b^p
+
+on sait que a^p congru à b^p [n] et a congru a b[n]
+Donc leurs produits sont aussi congrus.
+
+

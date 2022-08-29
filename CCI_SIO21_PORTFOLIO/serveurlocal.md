@@ -1,0 +1,1 @@
+Serveur local par apache sit je met les fichiers dans le dossier cci-dev/var/www et que je tape localhost dans le navigateur 

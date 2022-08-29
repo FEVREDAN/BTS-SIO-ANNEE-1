@@ -1,0 +1,73 @@
+h1{
+    width : 200px;
+    color:rgb(101, 226, 43);
+    border: 2px rgb(151, 39, 39)solid;
+    margin: 200px;
+    padding: 200px;
+    overflow:auto;
+    Border-width : 20px;
+    border-style: groove;
+    Border-color : red; 
+}
+
+.menu {
+    background-color:rgb(43, 144, 226);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.conteneur {
+    display: flex;
+}
+
+.eleImage {
+    background-color: rgb(243, 6, 6);
+    width: 30%;
+    height: 300px;
+    margin: 10px;
+    border-radius: 20%;
+    
+
+}
+.eleImage :hover {
+    background-color: rgb(12, 1, 1);
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 20%;
+    box-shadow: 10px 10px 10px 10px black;
+    
+
+}
+.eleImage h2{
+
+    text-align: center;
+}
+img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 20%;
+}
+
+.vignette{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+@media screen and (max-width : 1200px)
+  { 
+      .eleImage{
+          width: 45%;
+      }  
+}
+
+@media screen and (max-width : 700px)
+  { 
+      .eleImage{
+          width: 90%;
+      }  
+}

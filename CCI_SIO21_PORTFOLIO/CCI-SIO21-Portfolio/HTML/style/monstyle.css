@@ -1,0 +1,213 @@
+
+
+/* Police*/
+@font-face {
+    font-family: 'OpenSans';
+    src: 	url('OpenSans-VariableFont_wdth,wght.ttf') format('ttf'),
+	url('maPolice.ttf') format('truetype');
+}
+/* Le menu de navigation latéral */
+.sidenav  {
+    height: 300%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: absolute; /* reste fixe */
+    z-index: 1; /* reste en haut */
+    top: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0); /* couleur menu*/
+    overflow-x: hidden; /* empêche la croix d'être présente tout le temps */
+    padding-top: 0px; /* Place le contenu à 0px du haut */
+    transition: 0.5s; /* temps de transition ouverture */
+}
+/* Les liens du menu de navigation */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+/* Lorsque on passe la souris sur les liens de navigation, change leur couleur */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Positionner et styliser le bouton de fermeture (coin supérieur droit) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 260px;
+    font-size: 50px;
+    margin-left: 50px;
+}
+/* positionne le menu en haut à droite */
+.topnav {
+    position: fixed;
+    right: 0%;
+    top: 0%;
+}
+/* Stylise les liens à l'intérieur de la barre de navigation */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+/* Change la couleur des liens au survol */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+/* Ajoute une couleur au lien actif/actuel */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+/* Pour éviter que la croix pour fermer le menu soit tout le temps apparente */
+#ico{
+  display: none;
+}
+/* paramètre du html */
+html {
+    height: 200%;
+    text-align: center;
+}
+/* paramètre du html de la page index */
+#htmlindex {
+    height: 150%;
+}
+/* paramètre du html de la page Présentation */
+#htmlpre {
+    height: 220%;
+}
+#htmlproj {
+    height: 1000%;
+}
+/* paramètre du body */
+body {
+    background-color: #6a6363;
+    margin: 0%;
+    
+}
+/* Options titre H1 */
+h1 {
+    font-family: 'OpenSans';
+    font-size: 60px;
+    display: block;
+    position: absolute; /* postulat de départ */
+    top: 50%; left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    padding-left: 40px;
+    padding-right: 40px;
+    box-shadow: 6px 6px 6px;
+    border-radius: 5px 5px 5px 5px;
+    color:#FFFFFF;
+    background-color:#000000;
+    letter-spacing:4px;
+}
+/* Options titre H1 de la page index */
+#h1index {
+    font-family: 'OpenSans';
+    top: 40%; left:50%;
+    
+}
+/* Options titre H1 de la page Mention */
+#h1mention {
+    font-family: 'OpenSans';
+    top: 20%; left:50%;
+    padding-left: 10px;
+    padding-right: 20px;
+    
+}
+
+
+/* Options titre H2 */
+h2 {
+    font-family: 'OpenSans';
+    font-size: 30px;
+    color:#FFFFFF;
+    margin-bottom: 5%;
+}
+
+/* Options LOGO */
+.im1 {
+    position: absolute;
+    left: 0.3%;
+    top: 0.3%;
+    text-align: left;
+}
+/* Options image cv de la pas CV */
+.cv1 {
+    text-align: center;
+    padding-bottom: 5%;
+    
+}
+/* Options lien cliquable */
+a {
+    text-decoration: none;
+    color:#FFFFFF;
+}
+
+
+
+#lien {
+    box-shadow: 6px 6px 6px;
+    border-radius: 5px 5px 5px 5px;
+    color:black;
+    background-color:white;
+    font-size: 40px;
+    padding: 10px;
+
+}
+
+p {
+    font-family: 'OpenSans';
+    text-align: left;
+    margin-left: 34%;
+    margin-right: 34%;
+    font-size: 19px;
+    color:#FFFFFF;
+}
+/* Options paragraphe */
+.paramention {
+    font-family: 'OpenSans';
+    text-align: left;
+    margin-left: 30%;
+    margin-right: 25%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    font-size: 19px;
+    color:#FFFFFF;
+    padding-bottom: 20px;
+}
+
+/* Options footer */
+footer {
+    text-decoration: none;
+    font-size: 19px;
+    color:#FFFFFF;
+    background-color:#000000;
+    position: fixed;
+    width: 100%; height: 20px;
+    bottom: 0;
+    letter-spacing:2px;
+    float: left;
+    right: 0px;
+    text-align: center;
+}
+/* Options lien "mail" dans le footer */
+footer .mail {
+    border-radius: 5px 5px 5px 5px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+/* Options placement Copiright dans le footer */
+footer .copiright {
+    border-radius: 5px 5px 5px 5px;
+    margin-left: 5%;
+}

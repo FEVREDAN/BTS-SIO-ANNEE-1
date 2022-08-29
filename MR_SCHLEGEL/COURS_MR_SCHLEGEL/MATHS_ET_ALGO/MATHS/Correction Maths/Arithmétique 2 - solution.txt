@@ -1,0 +1,94 @@
+I. Divisibilité :
+
+Question 1 :
+	180 = 2 * 90 = 2 * 2 * 45 = 2 * 2 * 3 * 15 = 2 * 2 * 3 * 3 * 5
+
+	Diviseurs :
+		2 : 4, 6, 9, 10, 15
+		3 : 12, 18, 20, 30, 45
+		4 : 36, 90, 60
+		5 : 180
+
+Question 2
+	630 = 2 * 315 = 2*3*105 = 2*3*3*35 = 2*3*3*5*7
+
+	Diviseurs :
+		2 : 6, 10, 14, 9, 15, 21, 35
+		3 : 18, 30, 42, 70, 45, 63, 105
+		4 : 90, 126, 210, 315
+		5 : 630
+
+Question 3 :
+	PGCD(180, 630) = 90
+
+II. Alogrithme Euclide :
+
+Question 4 :
+	PGCD(306, 758) : 758 = 2 * 306 + 46
+	PGCD(306, 46) : 306 =  6 * 46 +  30
+	PGCD(46, 30) : 46 = 1 * 30 + 16
+	PGCD(30, 16) : 30 = 1 * 16 + 14
+	PGCD(16, 14) : 16 = 1 * 14 + 2
+	PGCD(14, 2) : 14 = 7* 2 + 0
+	PGCD(306, 758) = 2
+
+Question 5 :
+	PGCD(1725, 1309) : 1725 = 1 * 1309 +  416
+	PGCD(1309, 416) : 1309 = 3 * 416 + 61
+	PGCD(416, 61) : 416 = 6 * 61 + 50
+	PGCD(61, 50) : 61 = 1 * 50 + 11
+	PGCD(50, 11) : 50 = 4 * 11 + 6
+	PGCD(11, 6) : 11 = 1 * 6 + 5
+	PGCD(6, 5) : 6 = 5 * 1 + 1
+	PGCD(5, 1) : 5 = 5 * 1 + 0
+ 	PGCD(1725, 1309) = 1
+
+III. Congruence :
+
+Question 6 :
+	Si 7064 est congru à 1148 [17] alors 7064 - 1148 est divisible par 7
+	7064 - 1148 = 5916 = 348 * 17
+
+Question 7 :
+	reste de 3^4502 / 8
+
+	3^1 % 8 = 3
+	3^2 % 8 = 1
+	3^4502 = 3^(2 * 2251) = (3^2)^2251 donc (3^2)^2251 congru à 1^2251 [8] = 1 [8]
+
+Question 8 :
+	reste de 2^18607 / 3
+
+	2^1 % 3 = 2
+ 	2^2 % 3 = 1
+	2^18607 = 2^(2*9303 + 1) = (2^2)^9303 * 2^1 donc (2^2)^9303 * 2 congru à 1^9303 *2 [3] = 2 [3]
+
+Question 9 :
+
+fonction additionneHeure(h1 : entier, m1 : entier, h2 : entier, m2 : entier) : rien
+Variables locales :
+	h : entier
+	m : entier
+Début
+	h = h1 + h2 + ((m1 + m2) / 60)
+	m = (m1 + m2) % 60
+
+	si h > 24 alors
+		Ecrire "1 jour, "
+ 		h = h -24
+	Fsi
+	Ecrire h + " heures, " + m + " minutes"
+Fin
+
+fonction codeCadena(c1 : entier, c2: entier, c3: entier, c4 : entier) : entier
+Variables locales :
+	combinaison : entier
+Début
+	c1 = (c1 + 1) % 10
+	c2 = (c2 + 2) % 10
+	c3 = (c3 + 3) % 10
+	c4 = (c4 + 4) % 10
+
+	combinaison = c1 * 1000 + c2 * 100 + c3 + 10 + c4
+	retour <-- combinaison
+Fin

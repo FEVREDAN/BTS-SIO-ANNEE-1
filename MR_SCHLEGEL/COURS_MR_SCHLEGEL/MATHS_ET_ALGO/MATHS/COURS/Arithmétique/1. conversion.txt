@@ -1,0 +1,133 @@
+1* Représenter un nombre d'une autre base.
+
+Il y a plusieurs façon de représenter une nombre d'une autre base:
+- Avec un entier, mais cela ne fonctionnera pas pur les représentation > 10
+- Avec une chaine de caractère : "111011"
+- Avec un tableau : [1, 1, 1, 0, 1, 1]
+
+2* Conversion binaire vers décimal
+
+fonction binToDec(chaine de caractères : c): entier 
+
+Variables locales :
+
+	nbDec : entier
+	puissance : entier
+	
+Début
+	nbDec <-- 0
+	puissance <-- 1
+	tant que c <> ""
+		chiffre <-- c[len(c) - 1]
+		nbDec <-- puissance * entier(chiffre)
+		supprimer c[len(c) - 1]	
+		puissance <-- puissance * 2
+	fin tant que
+	retour <-- nbDec 
+Fin fonction
+
+3* Conversion Hexa vers décimal
+
+fonction hexToDec(chaine de caractères : c): entier 
+
+Variables locales :
+
+	nbDec : entier
+	puissance : entier
+	valHexa : Dictionnaire = {'A': 10, 'B' : 11, 'C': 12, 'D' : 13, 'E': 14, 'F' : 15}
+Début
+	nbDec <-- 0
+	puissance <-- 1
+	tant que c <> ""
+		chiffre <-- c[len(c) - 1]
+		si est_numerique(chiffre) alors
+			nbDec <-- puissance * entier(chiffre)
+		sinon
+			nbDec <-- puissance * valHexa[chiffre]
+		fsi	
+		supprimer c[len(c) - 1]	
+		puissance <-- puissance * 16
+	fin tant que
+	retour <-- nbDec 
+Fin fonction
+
+4* Conversion Dec vers bin avec les puissances
+
+fonction decToBin(entier : n): chaine de caractères 
+
+Variables locales :
+
+	nbBin : chaine de caractères 
+	puissance, quotient : entier
+Début
+	nbBin <-- ""
+	puissance <-- 1
+	tant que puissance < n
+		puissance <-- puissance * 2
+	ftant
+
+	tant que n > 0
+		quotient <-- n / puissance
+		nbBin <-- nbBin + chaine(quotient)
+		si quotient > 0 alors
+			n = n - (quotient * puissance)
+		fsi
+		puissance <-- puissance / 2
+	fin tant que
+	retour <-- nbBin 
+Fin fonction
+
+5* Conversion Dec vers bin avec la division
+
+fonction decToBin(entier : n): chaine de caractères 
+
+Variables locales :
+
+	nbBin : chaine de caractères 
+	quotient, reste : entier
+Début
+	nbBin <-- ""
+	tant que n > 0
+		quotient <-- n / 2
+		reste <-- n % 2
+		nbBin <-- chaine(reste) + nbBin 
+		n <-- quotient
+	fin tant que
+	retour <-- nbBin 
+Fin fonction
+
+6* Conversion bin vers hex
+
+fonction binToHex(chaine de caractères: c): chaine de caractères 
+
+Variables locales :
+
+	nbHex : chaine de caractères 
+	valHexa : Dictionnaire = {'0000': '0', 
+				  '0001': '1', 
+				  '0010': '2', 
+				  '0011': '3', 
+				  '0100': '4', 
+				  '0101': '5', 
+				  '0110': '6', 
+				  '0111': '7', 
+				  '1000': '8', 
+				  '1001': '9', 
+				  '1010': 'A', 
+				  '1011': 'B', 
+				  '1100': 'C', 
+				  '1101': 'D', 
+				  '1110': 'E', 
+				  '1111': 'F' 
+}
+Début
+	Tant que longueur(c) % 4 <> 0
+		c <-- '0' + c
+	Fin tant
+
+	nbHex <-- ""
+	Tant que longueur(c) > 0
+		nbHex <-- nbHex + valHexa [c[:4]]
+	Fin tant
+	retour <-- nbHex
+Fin fonction

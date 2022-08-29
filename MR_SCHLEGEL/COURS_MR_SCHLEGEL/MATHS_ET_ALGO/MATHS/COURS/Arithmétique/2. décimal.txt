@@ -1,0 +1,270 @@
+##### Algorithme décimaux #####
+
+1. Fonction pair
+
+fonction estPair(entier n) : booléen
+Début
+	Si n % 2 = 0 alors
+		retour <- VRAI
+	sinon
+		retour <- FAUX
+	fsi
+Fin
+
+2. Comparaison
+
+fonction compare(entier n1, entier n2) : chaine de caractères
+Début
+	Si n1 < n2 alors
+		retour <- 'Inférieur'
+	sinon si n1 > n2 alors
+		retour <- 'Supérieur'
+	sinon
+		retour <- 'Egal'
+	fsi
+Fin
+
+3. Tableau trié
+
+fonction estTrié(tableau d'entier t) : booléen
+Début
+	pour i de 1 à taille(t) - 1
+		si t[i-1] > t[i] alors
+			retour <-- FAUX
+		fsi
+	fpour
+	
+	retour <-- VRAI
+Fin
+
+4. Afficher un nombre décimal
+
+fonction AffDec(entier : n, decimal : d) : rien
+Variables locales
+	aff : chaine de caractères
+	unite : entier
+Début
+    aff = ""
+    Tant que n > 0
+        unite <-- n % 10
+        aff <-- unite + aff
+        n = n // 10
+        d = d - 1
+        si d = 0 alors
+            aff = ',' + aff
+    Ftant
+
+    ecrire aff
+Fin
+
+5. Afficher un nombre décimal avec le signe
+
+fonction AffDec(entier : n, decimal : d, chaine de caractère : signe) : rien
+Variables locales
+	aff : chaine de caractères
+	unite : entier
+Début
+    aff = ""
+    Tant que n > 0
+        unite <-- n % 10
+        aff <-- unite + aff
+        n <-- n // 10
+        d <-- d - 1
+        si d = 0 alors
+            aff <-- ',' + aff
+    Ftant
+
+    aff <-- signe + aff
+
+    ecrire aff
+Fin
+
+##### Algorithme d'opération #####
+
+1. Table de multiplication 
+
+fonction table() : rien
+Début
+	pour i de 0 à 10
+		pour j de 0 à 10
+			Ecrire i + '*' + j + '=' + i * j  
+		fpour
+	fpour
+Fin
+
+2. Nombre décimal valide
+
+fonction decValide(chaine de caractère : c) : booléen
+Variables locales
+	nbVirgule : entier
+Début
+	nbVirgule <-- 0
+	pour i dans c
+		si i = ',' alors
+			si nbVirgule = 1 alors
+				retour <-- FAUX
+			fsi
+			nbVirgule <-- nbVirgule + 1
+		sinon si i < '0' ou i > '9' alors
+			retour <-- FAUX
+		fsi
+	fpour
+
+	retour <-- VRAI
+Fin
+
+3. Nombre hexa valide
+
+fonction hexValide(chaine de caractère : c) : booléen
+Variables locales
+	nbVirgule : entier
+Début
+	nbVirgule <-- 0
+	pour i dans c
+		si i = ',' alors
+			si nbVirgule = 1 alors
+				retour <-- FAUX
+			fsi
+			nbVirgule <-- nbVirgule + 1
+		sinon si (i < '0' ou i > '9') et (i < 'A' ou i > 'F') alors
+			retour <-- FAUX
+		fsi
+	fpour
+
+	retour <-- VRAI
+Fin
+
+4. Nombre de 1 dans un bin
+
+fonction nbUn(entier : n) : entier
+Variables locales
+	nb1 : entier
+Début
+	nb1 <-- 0
+	Tant que n > 0
+		si n % 10 = 1 alors
+			nb1 <-- nb1 + 1
+		fsi
+		n <-- n // 10
+	Ftant
+
+
+	retour <-- nb1
+Fin
+
+5. Inverser un nombre binaire
+
+fonction invBin(entier : n) : entier
+Variables locales
+	inv: entier
+Début
+	nb1 <-- 0
+	Tant que n > 0
+		inv <-- inv * 10
+		inv <-- inv + n % 10 
+		n <-- n // 10
+	Ftant
+
+	retour <-- inv
+Fin
+
+6. Additionner deux bits
+
+fonction invBin(entier : bit1, entier : bit2) : entier
+Variables locales
+
+Début
+	si bit1 = 1 et bit2 = 1 alors
+		retour <-- 10
+	sinon
+		retour <-- bit1 + bit2
+	fsi
+Fin
+
+
+##### Algorithme arrondi #####
+
+1. Valeur absolue d'un nombre
+
+fonction abs(entier : n) : entier
+Variables locales
+
+Début
+	si n < 0 alors
+		retour <-- -1 * n
+	sinon
+		retour <-- n
+	fsi
+Fin
+
+2. Arrondie inférieur
+
+fonction inf(réel : n, entier : dec) : reel
+Variables locales
+	val_entiere : entier
+Début
+	val_entiere <-- (n * 10 ** -dec) // 1
+	retour <-- val_entiere * 10 ** dec
+Fin
+
+3. Arrondie supérieur
+
+fonction sup(réel : n, entier : dec) : reel
+Variables locales
+	val_entiere : entier
+Début
+	val_entiere <-- (n * 10 ** -dec) // 1
+	val_entiere <-- val_entiere + 1
+	retour <-- val_entiere * 10 ** dec
+Fin
+
+4. Ecriture scientifique 
+
+fonction sci(réel : n) : rien
+Variables locales
+	puissance10 : entier
+Début
+	puissance10 <-- 0
+	tant que n > 10
+		n <-- n / 10
+		puissance10 <-- puissance10 + 1
+	ftant
+
+	tant que n < 1
+		n <-- n * 10
+		puissance10 <-- puissance10 - 1
+	ftant
+
+	ecrire n + ' * 10 puissance ' + puissance10
+	
+Fin
+
+5. Lettre présente
+
+fonction trouve(chaine de caractère : s, caractère c ) : booléen
+Début
+	pour i dans s
+		si i = c alors
+			retour <-- VRAI
+		fsi
+	fpour
+	retour <-- FAUX
+	
+Fin
+
+6. Lettre présente avec rang
+
+fonction donneRang(chaine de caractère : s, caractère c ) : entier
+Variables locales
+	rang : entier
+Début
+	rang <-- 0
+	pour i dans s
+		si i = c alors
+			retour <-- rang
+		fsi
+		rang <-- rang + 1
+	fpour
+	retour <-- -1
+	
+Fin

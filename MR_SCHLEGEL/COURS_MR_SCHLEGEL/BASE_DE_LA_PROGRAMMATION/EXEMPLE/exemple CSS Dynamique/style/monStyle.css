@@ -1,0 +1,142 @@
+#imgGrand {
+    background:rgba(255,255,15,0);
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 1.85rem 3rem;
+    border-radius: 10rem;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+   /* transform: scale(1);*/
+    transition:all 5s ease-in-out;
+    transition-timing-function: cubic-bezier(0,1.51,.31,.98);
+    
+}
+
+#imgGrand:hover {
+    /*transform: translateY(-100%)rotate(360deg);*/
+    animation-name: img-Grand;
+    animation-duration: 5000ms;
+    background:rgba(255,0,0,1);
+}
+#imgBouge {
+    transform: translateY(100%);
+    transition: All 5s cubic-bezier(0,1.51,.31,.98);
+}
+#imgBouge:hover {
+    transform: translateY(-100%)rotate(360deg)skew(10deg,10deg);
+    transition: All 5s cubic-bezier(0,1.51,.31,.98);
+}
+
+.email_section {
+    background: #011c37;
+    color: #15DEA5;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 1.85rem 3rem;
+    border-radius: 10rem;
+    width: 600px;
+    margin : auto;
+
+}
+
+#elevoisin:hover + #imgGrand {
+    transform: translateY(-100px);
+}
+
+#imgBouge {
+    background: #011c37;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 1.85rem;
+    border-radius: 10rem;
+    width: 500px;
+    height: 500px;
+    margin : auto;
+    margin-top: 300px;
+    object-fit: cover;
+
+}
+
+#email{
+    background-color: white;
+}
+
+#email:focus{
+    background-color: green;
+}
+
+#email:not(:focus):invalid{
+    background-color: red;
+}
+
+.conteneur{
+    text-align: center;
+}
+
+@keyframes img-Grand {
+0% {
+        transform:scale(1)
+}
+17% {
+    transform: scale(1.05);
+}
+24% {
+    transform: scale(1.10);
+}
+46% {
+    transform: scale(1.13);
+}
+100% {
+    transform: scale(1.15);
+}
+}
+
+
+.favori{
+    position: relative;
+}
+
+.favori i{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.icon-base {
+    font-size: 2em;
+    transition: all 0.5s;
+    opacity: 1;
+}
+
+.icon-base:hover {
+    opacity: 0;
+    font-size: 2em
+}
+
+.icon-hover {
+    font-size: 2em;
+    transition: all 0.5s;
+    opacity: 0;
+    color: red;
+}
+
+.icon-hover:hover {
+    opacity: 1;
+}
+
+.fa-facebook {
+    color: blue;
+}
+
+.fa-twitter {
+    color: cornflowerblue;
+}
+
+.fa-instagram {
+    color: purple;
+}
+
+.fa-youtube {
+    color: red;
+}

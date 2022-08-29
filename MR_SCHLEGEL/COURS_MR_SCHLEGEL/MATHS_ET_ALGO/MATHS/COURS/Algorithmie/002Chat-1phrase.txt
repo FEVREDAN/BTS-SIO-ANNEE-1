@@ -1,0 +1,14 @@
+Déclaration 
+	chaine de caractères : sexe // mâle ou femelle
+	booléen : estCasttré // Vrai ou Faux
+	chaine de caractères : couleur // blanc, brun, noir, autre....
+
+Début
+	Si (sexe = "mâle" et estCastré et (couleur = "blanc" ou couleur = "brun")) ou 
+		(sexe = "femelle" et estCastrée et couleur <> "blanc") ou 
+		(couleur = noir) alors
+		Ecrire "Chat correspond"
+	Sinon 
+		Ecrire "Chat ne coreespond pas"
+	Fsi
+Fin 

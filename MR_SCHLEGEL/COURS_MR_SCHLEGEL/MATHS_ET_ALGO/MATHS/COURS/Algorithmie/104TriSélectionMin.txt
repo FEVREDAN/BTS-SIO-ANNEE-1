@@ -1,0 +1,15 @@
+Déclaration
+	Entier : indiceMinimum, temp
+	Entier : valeurs[] = [12, 5, 7, 9, 15, 6, 4, 19, 20, 6]
+Début
+	pour i de 0 à taille(valeurs) - 1
+		indiceMinimum = i
+		pour j de i+1 à taille(valeurs) - 1
+			si valeur[j] < valeurs[indiceMinimum] alors
+				indiceMinimum <-- j	
+		fpour
+		temp <-- valeurs[indiceMinimum]
+		valeurs[indiceMinimum] <-- valeurs[i]
+		valeurs[i] <-- temp	
+	fpour
+Fin

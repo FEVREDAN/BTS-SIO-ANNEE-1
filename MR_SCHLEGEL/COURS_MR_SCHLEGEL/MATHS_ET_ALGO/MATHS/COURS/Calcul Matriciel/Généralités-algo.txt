@@ -1,0 +1,114 @@
+#Algorithme qui donne le type de matrice
+Variables
+	m1[n][m] : Décimaux
+
+Début
+	si taille(m1) = taille(m1[0]) alors
+		Ecrire "La matrice est carrée"
+	sinon si taille(m1[0]) alors
+		Ecrire "La matrice est de type ligne"
+	sinon si taille(m1) alors
+		Ecrire "La matrice est de type colonne"
+	sinon	
+		Ecrire "La matrice est quelconque"
+	fsi
+Fin
+
+#Algorithme qui indique si la matrice est nulle
+Variables
+	m1[n][m]: Décimaux
+Début
+	si taille(m1) = taille(m1[0]) alors
+		Ecrire "La matrice est carrée"
+	sinon si taille(m1[0]) alors
+		Ecrire "La matrice est de type ligne"
+	sinon si taille(m1) alors
+		Ecrire "La matrice est de type colonne"
+	sinon	
+		Ecrire "La matrice est quelconque"
+	fsi
+
+	testNulle <- Vrai
+	pour i de 0 à taille(m1)
+		pour j de 0 à taille(m1[0])
+			si m1[i][j] <> 0 alors
+				testNulle <- Faux 
+			fsi
+		fpour
+	fpour
+	si testNulle alors
+		Ecrire "La matrice est nulle"
+	fsi
+Fin	
+
+#Algorithme qui donne également la matrice identité
+Variables 
+	m1[n][m] : décimaux
+Début
+
+	si taille(m1) = taille(m1[0]) alors
+		Ecrire "La matrice est carrée"
+		testIdent <- Vrai
+		pour i de 0 à taille(m1)-1
+			pour j de 0 à taille(m1)-1
+				si i = j et m1[i][j] <> 1 alors 
+					testIdent <- faux
+				fsi
+				si i <> j et m1[i][j] <> 0 alors
+					testIdent <- faux
+				fsi
+			fpour
+		fpour
+		si testIdent alors
+			Ecrire "Matrice identité"
+		fsi
+	sinon si taille(m1[0]) alors
+		Ecrire "La matrice est de type ligne"
+	sinon si taille(m1) alors
+		Ecrire "La matrice est de type colonne"
+	sinon	
+		Ecrire "La matrice est quelconque"
+	fsi
+
+	testNulle <- Vrai
+	pour i de 0 à taille(m1)-1
+		pour j de 0 à taille(m1[0])-1
+			si m1[i][j] <> 0 alors
+				testNulle <- Faux 
+			fsi
+		fpour
+	fpour
+	si testNulle alors
+		Ecrire "La matrice est nulle"
+	fsi
+Fin
+
+#Algorithme qui vérifie que deux matrices sont égales
+
+Variables 
+	m1[n][m] : décimaux
+	m2[n][m] : décimaux
+Début
+	si taille(m1) = taille(m2) alors
+		si taille(m1[0]) = taille(m2[0]) alors
+			testIdentique <- vrai
+			pour i de 0 à taille(m1)-1
+				pour j de 0 à taille(m1[0])-1
+					si m1[i][j] <> m2[i][j] alors
+						testIdentique <- faux
+					fsi
+				fpour
+			fpour
+			si testIdentique alors
+				Ecrire "Les deux matrices sont identiques"
+			sinon
+				Ecrire "Les deux matrices ne sont pas identiques - valeurs"
+			fsi
+		sinon
+			Ecrire "Les deux matrices ne sont pas identiques - nombre colonnes"
+		fsi
+	sinon
+		Ecrire "Les deux matrices ne sont pas identiques - nombre lignes"
+	fsi
+Fin
+

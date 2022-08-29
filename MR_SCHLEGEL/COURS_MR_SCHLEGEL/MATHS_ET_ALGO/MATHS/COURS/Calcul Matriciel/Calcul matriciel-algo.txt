@@ -1,0 +1,97 @@
+#Somme de deux matrices
+
+Variables :
+	m1[n][m] : Décimaux
+	m2[o][p] : Décimaux
+
+Début
+	si taille(m1) = taille(m2) et taille(m1[0]) = taille(m2[0]) alors
+		m3[taille(m1)][taille(m1[0])]
+		pour i de 0 à taille(m1) -1
+			pour j de 0 à taille(m1[0]) -1
+				m3[i][j] <- m1[i][j] + m2[i][j]
+			fpour
+		fpour	
+	sinon	
+		Ecrire "Il est impossible de faire la somme des matrices"
+	fsi
+Fin
+
+#Commutativité de matrice
+Variables:
+	m1[n][m] : Décimaux
+	m2[n][m] : Décimaux
+
+Début
+	si somme_matrice(m1, m2) = somme_matrice(m2, m1) alors	
+		Ecrire "La somme est commutative"
+	sinon
+		Ecrire "La somme n'est pas commutative"
+	fsi
+fin
+
+#Multiplier une matrice par un scalaire
+
+Variables :
+	m1[n][m] : décimaux
+	m2[n][m] : décimaux
+	s : décimaux
+Début
+	pour i de 0 à taille(m1) -1
+		pour j de 0 à taille(m1[0]) -1
+			m2[i][j] <- m1[i][j] * s
+		fpour
+	fpour		
+Fin
+
+#Somme d'une matrice et de son opposé
+
+Variables :
+	m1[n][m] : décimaux
+
+Début
+	m-1 = multiplicationScalaire(m1, -1)
+	pour i de 0 à taille(m1) -1
+		pour j de 0 à taille(m1[0]) -1
+			m2[i][j] <- m1[i][j] + m-1[i][j]
+		fpour
+	fpour
+Fin
+
+#Multiplication matrice
+
+Variables :
+	m1[n][m] : décimaux
+	m2[o][p] : décimaux
+
+Début
+	si taille(m1[0]) = taille(m2) alors
+		m3[n][p]
+		pour i de 0 à taille(m1) -1
+			pour j de 0 à taille(m2[0]) -1
+				m3[i][j] <- 0
+				pour k de 0 à taille(m1[0])
+					m3[i][j] <- m3[i][j] + (m1[i][k] * m2[k][j])
+				fpour
+			fpour
+		fpour
+	sinon 
+		Ecrire "Multiplication impossible"
+	fsi
+Fin
+
+# Associativité de la multplication
+Variables:
+	m1[n][m] : Décimaux
+	m2[n][m] : Décimaux
+	m3[n][m] : Décimaux
+
+Début
+	si mult_matrice(mult_matrice(m1, m2), m3) = mult_matrice(m1, mult_matrice(m2, m3)) alors	
+		Ecrire "La multiplication est associative"
+	sinon
+		Ecrire "La multiplication n'est pas associative"
+	fsi
+fin
+
+

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+          
+        <link type="text/css" rel="stylesheet" href="style/monStyle.css"/>
+        <link type="text/css" rel="stylesheet" media="screen and (max-width: 1280px)" href="style/petiteResStyle.css" />
+        <script src="js/script.js" async></script>
+        <title>Apprendre à programmer</title>
+    </head>
+
+    <body>
+        <!-- Ceci est un commentaire -->
+        <header>
+            <h1 id="titrePrincipal">Pourquoi apprendre à programmer ?</h1>
+        </header>
+        <nav>
+            <ul class="menu">
+                <li class="eleMenu"><a href="#intro">Introduction</a></li>
+                <li class="eleMenu"><a href="#ordi">Ordinateur</a></li>
+                <li class="eleMenu"><a href="#utilisation">Utilisation</a></li>
+                <li class="eleMenu"><a href="#langage">Langage</a></li>
+                <li class="eleMenu"><a href="#commencer">Commencer</a></li>
+                <li class="eleMenu"><a href="#choix">Choix</a></li>
+                <li class="eleMenu"><a href="#conclusion">Conclusion</a></li>
+            </ul>
+        </nav>
+        <section id="intro">
+            <p>C’est la première question que l’on se pose. Pour le moment, nous avons mené notre petite vie sans que l’obsession du programme bien
+                écrit ou l’attrait pour les compilateurs heurte de plein fouet notre curiosité. Et puis, on entend de plus en plus parler de 
+                programmation, d’intelligence artificielle, de machines qui remplaceront un jour les travailleurs. Est-ce que tout ceci est 
+                possible ou alors est-ce seulement une façon de construire des titres alarmistes dans la presse à sensation ? La programmation 
+                permet déjà de bien comprendre ce qu’il est possible de faire avec un ordinateur et ce qui est impossible. Elle permet avec 
+                quelques notions de séparer le réalisable du mythe.
+            </p>
+        </section>
+        
+        <section id="ordi">
+            <h2>A quoi peut nous servir un ordinateur ?</h2>
+            <p>L’ingéniosité de l’être humain l’a toujours poussé à créer de nouveaux objets pour faciliter son quotidien. L’automobile est venue
+                combler le besoin de se déplacer rapidement, les télescopes permettent d’explorer l’espace toujours plus loin et la machine à 
+                expresso nous permet dès le réveil d’emplir la cuisine d’une bonne odeur de café et de nous rendre socialement plus abordables. 
+                Alors pourquoi avons-nous inventer cette boite bruyante qui chauffe et dont l’aspect se rapproche plus d’un parpaing que d’une 
+                œuvre d’art néo-classique?
+            </p>
+            
+            <p>Attachons-nous déjà au nom de l’objet. En langue française, nous utilisons le terme d’ordinateur ce qui ne nous avance pas 
+                franchement. A la limite, nous pouvons ressentir une volonté d’ordonner les choses. Cela laisserait à penser qu’un ordinateur est une 
+                sorte de trieur ou un moyen de gérer nos emplois du temps. Nous pouvons avoir une meilleure explication en traversant la Manche ou le 
+                Rhin pour voir ce qu’en pensent nos voisins.
+            </p>
+            
+            <p>Du côté des Britanniques, l’ordinateur devient « The Computer » ou « Ze Computaire » avec le « lovely french accent » qui nous 
+                caractérise. Le terme « Computer » se décline directement du verbe « To compute » qui veut dire calculer. Cette constatation est 
+                renforcée par l’analyse du terme utilisé par nos voisins germanophones. Ces derniers utilisent le mot « der Rechner » qui signifie 
+                « calculateur ». Les Allemands ont cette faculté de souvent considérer la fonction et d’en faire le nom de l’objet si bien que si 
+                tu sais comment ça s’appelle, tu sais aussi à quoi ça sert. Donc l’ordinateur semble bien être un calculateur. Mais bon, des 
+                calculatrices, normalement, tiennent dans la poche, il doit y avoir autre chose qui provoque tant d’engouement. Il faut continuer 
+                à creuser.
+            </p>
+            
+            <p>Je vous propose de voir ce que cette caisse de métal a dans le ventre. Si vous vous amusez à ouvrir un ordinateur (Je vous 
+                conseille de démonter un ordinateur qui n’est pas le vôtre car si vous n’avez pas trop d’expérience, vous aurez probablement 
+                un peu de mal à le remonter), que voyez-vous à l’intérieur? Souvent il y a énormément de poussière, mais ce n’est pas ce qui nous 
+                intéresse aujourd’hui. Il y a des câbles de couleurs un peu partout qui nous rappellent les scènes finales de films catastrophes 
+                où le héro doit couper le fil de la bonne couleur au dernier moment. Nous n’allons pas faire cela aujourd’hui, vous pouvez donc 
+                tranquillement ranger votre pince coupante.
+            </p>
+            
+            <p>Ces câbles servent à deux choses :</p>
+            
+            <ul>
+                <li>Véhiculer du courant pour alimenter les différents composants en électricité.</li>
+                <li>Véhiculer de l’information entre les différents composants.</li>
+            </ul>
+
+            <p>La différence entre les deux câbles est très facile à faire. Il y a normalement quelque part dans votre ordinateur une boite noire 
+                carrée. Elle ne vous donnera pas toutes les informations sur les paramètres de l’ordinateur avant le crash mais elle permet 
+                d’alimenter l’ordinateur en électricité. Pour la reconnaître c’est très simple, il suffit de voir où se branche le câble qui 
+                va jusqu’à la prise de courant. On peut donc en déduire que les autres câbles sont des câbles qui échangent de l’information. 
+                Nous savons maintenant qu’un ordinateur est une grosse boite moche qui consomme du courant et dont les composants échangent des 
+                informations. Nous ne sommes toujours pas trop avancés.
+            </p>
+            
+            <p>Si on dit que l’ordinateur au travers de l’intelligence artificielle va un jour remplacer l’homme, c’est que quelque part là dedans 
+                se cache un cerveau. Le cerveau de l’ordinateur est appelé microprocesseur. Oui, autant le dire tout de suite, les informaticiens 
+                adorent les mots compliqués, il va falloir s’y faire. Cependant ces mots compliqués cachent souvent des principes assez faciles à 
+                comprendre. Le microprocesseur est un super calculateur. C’est son boulot, il calcule très très vite. Comme pourrais-je vous 
+                expliquer à quel point il calcule rapidement…. Vous vous souvenez du gars au premier rang en CM2 qui connaissait ses tables de 
+                multiplication sur le bout des doigts et qui répondait du tac-au-tac à peine l’instituteur avait fini de poser la question ? Eh 
+                bien l’ordinateur calcule plus vite encore. Si la boite de votre ordinateur est toujours ouverte, vous trouverez facilement le 
+                microprocesseur planqué sous un ventilateur. Il a en effet tendance à chauffer quand il calcule et si un léger vent frais ne vient 
+                pas le rafraîchir, il risque le burn-out, littéralement. Si vous êtes partis du fait qu’il s’agit du cerveau de l’ordinateur, vous 
+                risquez d’être déçu en le voyant. En effet, il ressemble plus à un sous plat pour ristretto avec l’épaisseur d’une crêpe bretonne 
+                plutôt qu’à un ensemble de neurones.
+            </p>
+            
+            <p>Ce microprocesseur est secondé par des espaces de stockage (disque dur, mémoire RAM, lecteur optique) parce que calculer vite c’est 
+                bien, mais si c’est pour oublier le résultat aussitôt, ça perd de son intérêt. Bref, nous comprenons donc que le microprocesseur 
+                doit pouvoir stocker ses résultats et c’est à ce niveau qu’interviennent les câbles d’échange d’information vus plus haut. Ces 
+                câbles ne sont pas reliés directement au microprocesseur mais à une grosse carte sur laquelle repose notre sous plat: la carte mère.
+                La carte mère a un rôle essentiel dans l’organisation d’un ordinateur. Elle permet que tout ce petit monde puisse communiquer en 
+                harmonie et que chacun puisse accéder aux ressources dont il a besoin. Qu’est ce qu’elle est sympa la carte mère quand même.
+            </p>
+            
+            <p>Je ne rentrerai pas dans les détails ici même si j’en ai déjà dit beaucoup, l’organisation d’un ordinateur pourrait devenir un 
+                article complet. Nous avons vu ce que contient l’ordinateur mais nous n’avons toujours pas vu à quoi il peut nous servir. 
+                L’ordinateur, au travers du microprocesseur, est capable de calculer à très grande vitesse et ne se fâche pas quand nous lui 
+                demandons des tâches rébarbatives. Les premières machines ont d’ailleurs été conçues dans ce but. En 1890, un ancêtre de nos 
+                ordinateurs a vu le jour au États-Unis pour faciliter le dépouillement des résultats du recensement. L’ordinateur est donc corvéable 
+                à merci, ne se plaint pas trop (au pire on le reboote) et dispose d’une puissance de calcul phénoménal. Cependant pour en tirer le 
+                meilleur parti, il faut apprendre à communiquer avec lui et c’est là qu’entre en jeu la programmation.
+            </p>
+        </section>
+        <section id="utilisation">
+            <h2>Utiliser un ordinateur</h2>
+
+            <p>Alors j’entends déjà quelques voix qui s’élèvent dans le fond: « Oui mais moi j’utilise un ordinateur depuis longtemps et je ne sais pas
+                programmer ». C’est une bonne remarque, c’est vrai que nous utilisons tous les ordinateurs à des degrés différents. Cela n’a pas 
+                toujours été ainsi, les premières machines s’actionnaient à l’aide d’interrupteurs comme ceux que nous utilisons pour allumer la 
+                lumière. Une position de l’interrupteur laisse passer le courant et l’autre ne le laisse pas passer. C’est comme ça que se passait le 
+                dialogue avec la machine dans un premier temps. Une bonne idée a alors été d’associer la valeur 1 au courant qui passe et le 0 à 
+                l’absence de courant et de fil en aiguille, les informaticiens sont devenus des gens étranges qui parlent couramment le binaire. Je ne 
+                dis pas que c’est faux, je dis juste que c’est un peu plus subtil que cela. Revenons à notre machine avec laquelle nous dialoguons 
+                avec des leviers et qui en retour allumait des ampoules pour nous répondre. De telles machines étaient assurément un progrès mais il 
+                fallait être un spécialiste pour pouvoir s’en servir.
+            </p>
+            
+            <p>De nos jours, tout le monde peut se servir d’un ordinateur car des programmes ont été écrits pour que cela devienne possible. Nous 
+                allons nous arrêter sur le plus utilisé d’entre eux, celui sans lequel rien ne serait possible, je vous demande d’accueillir sous vos 
+                applaudissements le <em>SYSTÈME D’EXPLOITATION</em>. Un système d’exploitation est un programme qui vous permet d’utiliser l’ordinateur que 
+                vous avez acheté. C’est un programme qui se fait oublier tellement il est omniprésent. Il s’appelle Windows, Linux, Mac OS, Unix… Ça 
+                vous dit quelque chose ? Ce système d’exploitation vous permet d’utiliser votre ordinateur sans savoir comment fonctionne le matériel 
+                qui se trouve dans la caisse. Le système d’exploitation c’est comme le volant, les pédales et le levier de vitesse qui vous permettent 
+                de rouler en voiture sans pour autant être capable d’expliquer comment fonctionne un moteur.
+            </p>
+            
+            <p>Je voudrais revenir sur une notion fondamentale, le système d’exploitation est un programme. C’est à dire que des gens ont travaillé 
+                souvent dur pour vous rendre le matériel accessible. Ce n’est plus à vous d’alimenter le microprocesseur en courant sur les bonnes 
+                pattes pour espérer le résultat escompté. Le système d’exploitation joue le rôle de traducteur entre vous et le matériel. Vous dites 
+                « Je voudrais jouer aux Sims », le système d’exploitation traduit pour le microprocesseur « Charge ce qui se trouve en mémoire à 
+                l’emplacement 0x123 ».
+            </p>
+            
+            <p>Il est donc tout à fait possible d’utiliser un ordinateur sans savoir programmer comme il est possible de conduire sans savoir comment 
+                fonctionne un moteur ou de s’extasier devant un tour de magie sans comprendre le trucage. Mais…. au fond de soi il y a parfois une 
+                petite voix qui nous pousse à en savoir plus. Mais comment ça marche au final ? Est-ce que c’est si compliqué que ça à faire ? Et 
+                lorsque cette petite idée surgit, c’est bien plus que le doigt que nous avons mis dans l’engrenage. Apprendre quelque chose de nouveau 
+                c’est grisant et cela nous pousse toujours plus loin car à chaque notion acquise, nous voyons un peu plus de perspectives encore 
+                inexplorées.
+            </p>
+        </section>
+        <section id="langage">
+            
+            <h2>Langage de programmation mais avant tout un langage</h2>
+
+            <p>Je voudrais insister sur la notion de langage car cela est très important et se retrouve souvent relégué au second plan. Nous avons 
+                tous une langue maternelle et nous apprenons des langues étrangères au cours de notre vie. Le but étant de pouvoir dialoguer avec 
+                le plus de monde possible. C’est exactement le même principe avec un langage programmation sauf que nous n’apprenons pas ici à 
+                communiquer avec d’autres individus mais avec une machine. Cependant, tous les langages sans exception ont été écrits par des 
+                personnes physiques qui ont toujours essayé de rapprocher la syntaxe de notre langage naturel.
+            </p>
+            
+            <p>Il s’agit tout de même d’une grande différence. Un être vivant a un cerveau qui lui permet de s’adapter. Si quelqu’un vous parle 
+                avec un fort accent, vous pouvez toujours faire un effort pour le comprendre, lui poser des questions pour le faire préciser sa 
+                demande. Un ordinateur n’a pas ce trait de personnalité, en fait, de personnalité, il n’en a aucune. Il vous pointera du doigt, 
+                là où vous vous exprimez d’une façon qu’il ne comprend pas, puis prendra son air condescendant pour vous signaler son mépris de ne 
+                pas avoir écrit comme il faut. Il ne faut pas être susceptible lorsque vous discutez avec un ordinateur, il n’est pas méchant, 
+                c’est juste qu’il est comme ça. Il sait calculer vite et juste, mais ne lui demandez pas d’avoir de l’empathie. Vous pouvez le 
+                trouver très rustre au départ, mais il a quand même un bon fond puisqu’il sera disposé à vous aider pour trouver vos erreur. C’est 
+                un bon gars au final.
+            </p>
+            
+            <p>Un langage de programmation est souvent une version très simplifiée du langage que nous utilisons tous les jours. En effet, une 
+                langue comme le français est remplie de nuances, de synonymes, de métaphores. La machine se veut efficace, elle n’a que faire des 
+                formules de politesse ou des débats sur la météo des jours à venir. Le langage de programmation se rapproche donc plus de la 
+                syntaxe des hommes de Cro-Magnon que d’une pièce de Molière. « Toi faire ci et après toi faire ça ». L’ordinateur ne vous en 
+                voudra pas de lui parler en ces termes. Au contraire, il sera flatté que vous utilisiez un langage qu’il comprenne et qui ne lui 
+                fasse pas perdre de temps. Le seul but du langage de programmation est que la machine comprenne ce que vous attendiez d’elle et 
+                qu’elle vous fournisse en retour vos résultats.
+            </p>
+            
+            <p>Si vous vous lancez dans la programmation, n’oubliez pas que ces quelques conseils ne concernent que les dialogues avec la machine. 
+                Si vous vous mettez en tête de supprimer tout ce qui est superflu dans les discussions que vous entretenez avec votre entourage, 
+                vous aurez tôt fait de vous retrouver seul devant votre machine ou alors pire, vous risquez de vous retrouver uniquement entre 
+                développeurs.
+            </p>
+        </section>
+        <section id="commencer">
+            
+            <h2>De quoi ai-je besoin pour commencer ?</h2>
+
+            <p>La bonne nouvelle c’est que vous n’avez pas besoin de grand chose pour débuter si ce n’est la volonté d’explorer quelque chose de 
+                nouveau et de s’accrocher pour acquérir les premières notions. Il vous faut tout d’abord un ordinateur, j’espère ne pas avoir à 
+                vous en expliquer les raisons. Quand je dis un ordinateur, je veux vraiment dire n’importe lequel, celui que vous avez sous la 
+                main fait très bien l’affaire. Les premiers pas en programmation ne vous demanderont pas une puissance de calcul très importante.
+            </p>
+            
+            <p>Il faut ensuite un éditeur de texte. Il s’agit d’un petit logiciel qui va vous permettre de saisir vos programmes. Quand je dis 
+                saisir, je veux dire les écrire, je ne veux évidement pas dire les faire cuire une minute dans une poêle très chaude. L’idéal est 
+                d’avoir un éditeur avec une coloration syntaxique, c’est à dire que l’éditeur comprend dans quel langage vous programmez et colore 
+                les différentes parties du programme pour vous aider à vous y retrouver. Si vous cherchez sur internet vous trouverez des éditeurs 
+                à la pelle (Atom, Notepad++, Vim, Emacs, UltraEdit, Visual Studio….). Le meilleur est celui qui vous conviendra le mieux. Si vous 
+                vous rendez-compte que celui que vous avez choisi ne vous plaît pas, en changer n’aura aucune conséquence. Il faut donc en tester : 
+                « Je cherche un éditeur de texte pour faire un bout de chemin ensemble et plus si affinité 
+            </p>
+            
+            <p>Voila nous arrivons déjà à la fin de cette partie. Si vous avez un ordinateur chez vous, beaucoup d’éditeurs de texte sont en open 
+                source et vous apporteront pleine satisfaction. Niveau budget, je dois admettre que je connais des projets plus onéreux. Il reste 
+                donc à choisir votre langage de programmation.
+            </p>
+        </section>
+        <section id="choix">
+            
+            <h2>Le choix du langage</h2>
+
+            <p>Arrivé à cette étape, on peut se retrouver bloquer. On pense parfois que le choix du langage sera déterminant, que si on fait le 
+                mauvais choix, tous nos efforts seront réduits à néant. Heureusement, ce n’est pas le cas. Le meilleur moyen est de commencer le 
+                plus rapidement possible à programmer, car vous verrez avec le temps que l’apprentissage d’un langage vous permettra de comprendre 
+                relativement bien un programme écrit dans un autre langage. Chaque langage a ses propres règles, sa syntaxe ou des fonctions mais 
+                si vous avez compris comment se construit un programme, vous vous adapterez vite.
+            </p>
+            
+            <p>Je vous conseille quand même de vous tourner vers un langage qui a beaucoup d’adeptes (C/C++, Java, C#, Python, Javascript, PHP…). 
+                Cela vous permettra d’avoir beaucoup plus d’aide en ligne plutôt que si vous vous mettez à un langage qui n’est utilisé que par 15 
+                développeurs dans le sud du Costa Rica. En effet, dans les premiers temps, vous allez chercher beaucoup pour résoudre vos problèmes 
+                et plus le langage est connu, plus il est probable que des gens se soient déjà heurtés au même problème que vous et ont posé la 
+                question sur un forum. J’aimerais également préciser l’importance de comprendre l’anglais pour les mêmes raisons. Énormément 
+                d’articles et de forum d’entraide existent en langue anglaise.
+            </p>
+            
+            <p>Mais comme je l’ai déjà dit plus haut, installez-vous un bon éditeur de texte, un interpréteur/compilateur suivant le langage que vous
+                avez choisi et commencez à coder le plus vite possible. Les changements se feront probablement avec le temps et avec l’expérience 
+                que vous allez acquérir. C’est comme s’entraîner à lire. Peu importe ce que l’on lit, l’important c’est de lire. La programmation 
+                comme la lecture s’acquiert avec la pratique. On peut passer sa vie à lire des livres sur la programmation et les différents langages
+                (et j’ai l’impression qu’une vie ne suffirait pas à tous les lire de toute façon).
+            </p>
+        </section>
+        <section id="conclusion">
+            
+            <h2>Conclusion</h2>
+
+            <p>J’espère vous avoir donné envie de vous lancer, d’ouvrir votre éditeur de texte et de programmer à votre tour un HelloWorld. Puis en
+                cliquant sur <em>Enter</em> d’attendre fébrilement et d’avoir ce sentiment de satisfaction lorsque l’ordinateur vous affiche exactement ce
+                que vous lui avez demandé. Vous savez maintenant que plus rien ne sera plus comme avant, vous avez ce pouvoir. Vous murmurez aux
+                oreilles des machines et… elles vous écoutent. Vous vous sentirez comme ces magiciens qu’on accepte dans un cercle très fermé
+                et à qui on révèle les tours les plus mystérieux. Le chemin sera semé d’embûches mais vous ne serez jamais seuls dans cette
+                aventure.
+            </p>
+        </section>
+        <div class="vignettes">
+            <div class="eleImage">
+                <img alt="Chute d'eau" src="images/chaadaev.jpg"/>
+                <div>
+                    <h2 class="legende">Chute d'eau</h2>
+                </div>
+            </div> 
+            <div class="eleImage">
+                <img alt="Citron" src="images/cup-of-couple.jpg"/>
+                <div>
+                    <h2 class="legende">Citron</h2>
+                </div>
+            </div> 
+            <div class="eleImage">
+                <img alt="Rose" src="images/ewing.jpg"/>
+                <div>
+                    <h2 class="legende">Rose</h2>
+                </div>
+            </div> 
+            <div class="eleImage">
+                <img alt="Fontaine" src="images/kozlov.jpg"/>
+                <div>
+                    <h2 class="legende">Fontaine</h2>
+                </div>
+            </div> 
+            <div class="eleImage">
+                <img alt="Blob" src="images/mart.jpg"/>
+                <div>
+                    <h2 class="legende">Blob</h2>
+                </div>
+            </div> 
+            <div class="eleImage">
+                <img alt="Cheval" src="images/natalie.jpg"/>
+                <div>
+                    <h2 class="legende">Cheval</h2>
+                </div>
+            </div> 
+        </div>
+        <div id="fin">
+            
+        </div>
+        <label> Choissisez une couleur:
+            <select id="couleur">
+                <option value="">Choissisez une couleur</option>
+                <option value="rouge">Rouge</option>
+                <option value="bleu">Bleu</option>
+                <option value="vert">Vert</option>
+            </select>
+        </label>
+        <BR>
+        <label> Une zone de saisie très irritante
+            <input id="textequirendfou" type="text">
+        </label>
+        <footter>
+            <p>Philippe Schlegel</p>
+        </footter>
+    </body>
+</html>

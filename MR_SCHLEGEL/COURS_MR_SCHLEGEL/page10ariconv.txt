@@ -1,0 +1,20 @@
+(10101)2 = 1 x 2^4 + 0 * 2^3 + 1 x 2^2 + 0 x 2^1 + 1 x 2^0 = 21
+
+(111011)2 =1 x 2^5 + 1x2^4 + 1x2^3 + 0x2^2 + 1x2^1 + 1x2 ^0 = 32 + 16 + 8 + 0 + 2 + 1=59
+
+(11111111)2 = 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1
+
+(124)8= 1 x 8^2 + 2x8^1 +4 x 8^0 = 64 + 16 + 0 = 84
+
+(256)8 = 2x8^2+5x8^1+6x8^0 = 128 + 40 + 6 = 174
+
+(A8)16 = 10 + 8 = 10 x 16^1 + 8x16^0 = 10 x 16 + 8 x 1 = 168
+
+(FF)16 = 15 15 = 15 x 1^16 + 15 x 0 ^16 =15 x 16 + 15 x 1 = 240 + 15 = 255
+
+page 15 
+pour convertir decimal en bianire, soit on fait aec les puissance
+
+63 = (00111111)2       (calcul des puissance de 128 (8eme octet) a 1 (premier octet) 
+
+Soit division euclidienne successive

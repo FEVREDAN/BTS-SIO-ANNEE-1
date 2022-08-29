@@ -1,0 +1,27 @@
+Déclaration
+	Entier : tailleMap = 10
+	Entier : altitude[
+		[0,1,2,1,0,0,0,1,0,0]
+		[0,0,1,0,0,0,0,1,0,0]
+		[0,0,0,0,0,0,1,2,1,0]
+		[0,1,2,1,0,1,2,3,2,1]
+		[0,1,2,1,1,2,3,4,3,2]
+		[0,1,2,1,2,3,4,5,4,3]
+		[0,1,3,1,1,2,3,4,3,2]
+		[0,1,2,1,0,1,2,3,2,1]
+		[0,1,2,1,0,0,1,2,1,0]
+		[0,1,2,1,0,0,0,1,0,0]
+		]
+	Entier : indiceX=0, indiceY=0
+Début
+	pour i de 0 à tailleMap-1
+		pour j de 0 à tailleMap-1
+			si altitude[i][j] > altitude[indiceX][indiceY] alors
+				indiceX <-- i
+				indiceY <-- j
+			fsi
+		fpour
+	fpour
+
+	Ecrire "Hauteur mx : " altitude[indiceX][indiceY]
+Fin

@@ -1,0 +1,34 @@
+Fonction lireNombreJoueur() Entier
+
+Déclaration
+	Chaine de caractères : str_joueur
+Début
+	Faire 
+		str_joueur <- Lire
+	Tant que str_joueur n'est pas un nombre entier
+
+	retour <-- Entier(str_joueur)
+Fin
+
+
+Programme principal
+
+Déclaration
+	Entier : n_mystere, n_joueur
+Début
+	n_mystere <- 10
+
+	n_joueur <- lireNombreJoueur()
+
+	Tant que n_mystere <> n_joueur Faire
+		Si n_mystere < n_joueur alors
+			Ecrire “C’est moins”
+		Sinon
+			Ecrire  “C’est plus”
+		Fsi
+
+		n_joueur <- lireNombreJoueur()
+
+	Ftant 
+	Ecrire “C’est gagné”
+Fin

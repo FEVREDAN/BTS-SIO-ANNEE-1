@@ -1,0 +1,34 @@
+Fonction Formatter_nom(s : Chaine de caractères) Chaine de caractères
+
+Déclaration
+	Chaines de caractères : nom, prenom
+Début
+	nom <- prendre tous les caractères avant le premier espace de s
+	prenom <- prendre tous les caractères après le premier espace de s
+
+	retour <-- prenom + " " + nom
+Fin
+
+Fonction Formatter_annee(age : Entier) Entier
+
+Déclaration
+	Chaines de caractères : anneeNaissance
+Début
+	anneeNaissance <- 2020 - age
+
+	retour <-- anneeNaissance 
+Fin
+
+
+
+Déclaration
+	Chaines de caractères : nomPrenom
+	Entier : age
+Début
+	nomPrenom <- Lire
+	Ecrire Formatter_nom(nomPrenom )
+
+	age <- Lire
+	Ecrire Formatter_annee(age)	
+Fin
+

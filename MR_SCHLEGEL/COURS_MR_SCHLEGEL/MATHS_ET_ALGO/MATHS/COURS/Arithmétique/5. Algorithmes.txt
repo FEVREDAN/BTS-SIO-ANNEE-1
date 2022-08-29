@@ -1,0 +1,52 @@
+--> Fonction de vérification de congruence
+
+fonction estCongru(a : entier, b : entier, c : entier) : Booléen
+
+Début
+	si a % c = b % c alors
+		retour <-- Vrai
+	sinon
+		retour <-- Faux
+	Fsi	
+Fin
+
+--> Recheche de puissance dont le reste vaut 1
+
+fonction puissance1(n : entier, diviseur : entier) : entier
+Variable locale
+	puissance : entier
+Début
+	puissance <-- n
+	Tant que puissance % diviseur <> 1
+		puissance <-- puissance * n
+	Ftant
+	retour <-- puissance
+Fin
+
+--> Recherche de divisibilité par 3
+
+fonction simplifie3(n : entier) : entier
+Variable locale
+	somme : entier
+Début
+	Tant que n > 10
+		somme <-- 0
+		Tant que n > 0
+			somme <-- somme + (n % 10)
+			n = n / 10
+		Ftant
+		n <-- somme
+	Ftant
+	retour <-- n
+Fin
+
+
+--> Recherche de divisibilité par 7
+
+fonction simplifie7(n : entier) : entier
+Début
+	Tant que n > 70
+		n <-- n / 10 + (n % 10) * 5
+	Ftant
+	retour <-- n
+Fin

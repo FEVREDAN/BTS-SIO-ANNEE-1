@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  function myFunction(x) {
+    x.classList.toggle("change");
+  }
+</script>
+<style>
+
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+  
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.sous-menu {opacity: 0;}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.change .sous-menu {
+  opacity: 1;
+  
+}
+
+
+</style>
+</head>
+<body>
+  
+
+  <div class="fond"><img src="./CSS/images/accueil.jpg" alt="Fond d'écran" width="100%" height="90%"/></div>
+  <div class="im1"><img src="./CSS/images/logo.svg" alt="LOGO" width="7%" height="7%"/></div>
+  <div class="container" onclick="myFunction(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    <div class="sous-menu">
+      <nav>
+          <ul>
+              <li><a href ="#">MENU</a></li>
+              <li><a href ="#">ACCUEIL</a></li>
+              <li><a href ="#">PRÉSENTATION</a></li>
+              <li><a href ="#">CV</a></li>
+              <li><a href ="#">PROJETS</a></li>
+          </ul>
+      </nav>
+    </div>
+  
+  </div>
+
+
+
+
+
+
+</body>
+</html>

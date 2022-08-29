@@ -1,0 +1,110 @@
+/* Le menu de navigation latéral */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* reste fixe */
+    z-index: 1; /* reste en haut */
+    top: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0); /* couleur menu*/
+    overflow-x: hidden; /* empêche la croix d'être présente tout le temps */
+    padding-top: 0px; /* Place le contenu à 60px du haut */
+    transition: 0.5s; /* temps de transition ouverture */
+}
+
+/* Les liens du menu de navigation */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+    
+}
+
+/* Lorsque on passe la souris sur les liens de navigation, change leur couleur */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Positionner et styliser le bouton de fermeture (coin supérieur droit) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 315px;
+    font-size: 50px;
+    margin-left: 50px;
+}
+
+
+/* positionne le menu en haut à droite */
+.topnav {
+    position: fixed;
+    right: 0%;
+    top: 0%;
+}
+
+/* Stylise les liens à l'intérieur de la barre de navigation */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change la couleur des liens au survol */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Ajoute une couleur au lien actif/actuel */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Sur les écrans plus petits,hauteur inférieure à 450 pixels, modifie le style du sidenav (moins de remplissage et une taille de police plus petite) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+
+#ico{
+  display: none;
+}
+
+html {
+    height: 200%;
+    
+}
+
+body {
+    background-color: #6a6363;
+    margin: 0%;
+}
+
+.menu{
+  background: #000;
+  display: none;
+  padding: 5px;
+  width: 320px;
+
+}
+
+.im1 {
+    position: absolute;
+    left: 0.3%;
+    top: 0.3%;
+}
+.container2 {
+    position: relative;
+    text-align: center;
+    
+}

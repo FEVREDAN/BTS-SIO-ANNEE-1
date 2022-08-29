@@ -1,0 +1,11 @@
+Fonction minimum_de_3(n1 : Entier, n2 : Entier, n3 : Entier) Entier
+
+Début
+	si n1 < n2 et n1 < n3 alors
+		retour <-- n1
+	sinon si n2 < n1 et n2 < n3 alors
+		retour <-- n2
+	sinon 
+		retour <-- n3
+	fsi
+Fin

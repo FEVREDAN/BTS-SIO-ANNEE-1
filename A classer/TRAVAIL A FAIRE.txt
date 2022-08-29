@@ -1,0 +1,5 @@
+1.1 pratique gestion des tickets d'incident sous glpi             pour le 04/05/22
+(consigne de varnier, qualité de réponse doit être bien renseigné, évalué)
+3 documents différent à rédiger(voir restitution du travail dans document)
+
+Travailler sur l'AP2

@@ -1,0 +1,24 @@
+h1{
+    width : 200px;
+    color:rgb(101, 226, 43);
+    border: 2px rgb(151, 39, 39)solid;
+    margin: 200px;
+    padding: 200px;
+    overflow:auto;
+    Border-width : 20px;
+    border-style: groove;
+    Border-color : red; 
+}
+
+.menu {
+    background-color:rgb(101, 226, 43);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.conteneur {
+    display: flex;
+}
+
+

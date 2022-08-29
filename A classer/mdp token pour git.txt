@@ -1,0 +1,14 @@
+mdp token pour git = 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
+
+
+pour cloner repertoire dans VM, se connecter en ssh depuis le cmd avec : ssh dan@(l'adresse ip sorti par ip a)
+ensuite aller dans le dossier creer par l'installation de apache dans /var/www/html puis faire un git clone avec 
+le nom d'utilisateur qui est : FEVREDAN et en mdp il faut mettre le token qui as été généré en aller dans les settigns de git
+puis develloper settings puis personnal access tokens puis generate new token.
+
+Avec mr varnier on a juste cocher "repo" puis on a mis l'expiration à jamais pour éviter quil expire
+
+pour faire un git pull depuis une vm ubuntu server (linux aussi je pense) il faut faire un cd dans le repertoire 
+puis sudo git pull
+login : FEVREDAN$
+mdp : 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

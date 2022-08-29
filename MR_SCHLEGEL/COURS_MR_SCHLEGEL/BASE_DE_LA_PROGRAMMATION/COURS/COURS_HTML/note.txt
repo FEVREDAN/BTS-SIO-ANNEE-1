@@ -1,0 +1,27 @@
+-Comprendre la notion d'algo
+-Discutons avec la machine
+-de l'idée à la réalisation
+-les variables
+-les structures conditionelles
+-Les boucles
+-Les fonctions
+-Quelques cas concrets
+-Questions et ressentis
+
+
+algo -->language evolué -->language assembleur --> Binaire 
+
+1 Bytes (américain)= 8 bits (français)
+
+algèbre de Boole , 
+créateur de logique moderne fondé sur une structure algébrique et sémantique
+que l'on appelle algebre de boole
+
+nom = "dan"
+passion = "kitesurf"
+
+Print("Bonjour", nom,"vous aimez", passion)
+
+opérateur logiques si c'est "et" 
+il faut que les deux conditions soit réunis pour que ce soit vrai
+si c'est "ou" il faut qu'une seule des deux conditions soit vrai que que ce soit vrai
