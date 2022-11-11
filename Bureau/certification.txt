@@ -1,0 +1,175 @@
+[ ca ]default_ca      = CA_root
+[ CA_root ]# Sur machine ca
+dir             = /opt/ca-w-inter
+certs           = $dir/certs
+crl_dir         = $dir/crl
+new_certs_dir   = $dir/newcerts
+database        = $dir/index.txt
+serial          = $dir/serial
+RANDFILE        = $dir/private/.rand
+private_key     = $dir/private/ca.key.pem
+certificate     = $dir/certs/ca.cert.pem
+crlnumber       = $dir/crlnumber
+crl             = $dir/certs/ca.crl.pem
+crl_extensions  = crl_ext
+default_crl_days= 30
+default_md      = sha256
+name_opt        = ca_default
+cert_opt        = ca_default
+default_days    = 3650
+preserve        = no
+policy          = policy_ca_only_sign_inter
+
+[ CA_inter ]#sur machine inter
+dir             = /opt/ca-w-inter/intermediate
+certs           = $dir/certs
+crl_dir         = $dir/crl
+new_certs_dir   = $dir/newcerts
+database        = $dir/index.txt
+serial          = $dir/serial
+RANDFILE        = $dir/private/.rand
+private_key     = $dir/private/intermediate.key.pem
+certificate     = $dir/certs/intermediate.cert.pem
+crlnumber       = $dir/crlnumber
+crl             = $dir/crl/intermediate.crl.pem
+crl_extensions  = crl_ext
+default_crl_days= 30
+default_md      = sha256
+name_opt        = ca_default
+cert_opt        = ca_default
+default_days    = 365
+preserve        = no
+policy          = policy_inter_sign_everything
+
+[ policy_ca_only_sign_inter ]
+countryName     = match
+stateOrProvinceName     = match
+organizationName        = match
+organizationalUnitName  = optional
+commonName      = supplied
+emailAddress    = optional
+
+[ policy_inter_sign_everything ]
+countryName     = optional
+stateOrProvinceName     = optional
+organizationName        = optional
+organizationalUnitName  = optional
+commonName      = supplied
+emailAddress    = optional
+
+[ req ]
+default_bits            = 4096
+distinguished_name      = req_distinguished_name
+string_mask             = utf8only
+default_md              = sha256
+x509_extensions         = v3_ca
+
+[ req_distinguished_name ]
+countryName                     = Country Name (2 letter code)
+countryName_default             = FR
+countryName_min                 = 2
+countryName_max                 = 2
+
+stateOrProvinceName             = State or Province Name (full name)
+stateOrProvinceName_default     = France
+
+localityName                    = Locality Name (eg, city)
+localityName_default            = Strasbourg
+
+0.organizationName              = Organization Name (eg, company)
+0.organizationName_default      = ccicampus
+
+organizationalUnitName          = Organizational Unit Name (eg, section)
+organizationalUnitName_default  = local
+
+commonName                      = Common Name (e.g. server FQDN or YOUR name)
+commonName_max                  = 64
+
+emailAddress                    = Email Address
+emailAddress_default            = fevre@ccicampus.local
+emailAddress_max                = 64
+
+[ v3_ca ]
+subjectKeyIdentifier=hash
+authorityKeyIdentifier=keyid:always,issuer
+basicConstraints = critical,CA:true
+keyUsage = critical,digitalSignature,cRLSign,keyCertSign
+
+[ v3_intermediate_ca ]
+subjectKeyIdentifier=hash
+authorityKeyIdentifier=keyid:always,issuer
+basicConstraints = critical,CA:true, pathlen:0
+keyUsage = critical,digitalSignature,cRLSign,keyCertSign
+
+[ server_cert ]
+basicConstraints = CA:FALSE
+nsCertType = server
+nsComment ="OpenSSL Generated Server Certificate"
+subjectKeyIdentifier =  hash
+authorityKeyIdentifier = keyid,issuer:always
+keyUsage = critical,digitalSignature,keyEncipherment
+extendedKeyUsage = serverAuth
+authorityInfoAccess = OCSP;URI:http://ocsp-inter.ccicampus.local:2555
+
+[ client_cert ]
+basicConstraints = CA:FALSE
+nsCertType = client, email
+nsComment ="OpenSSL Generated Client Certificate"
+subjectKeyIdentifier =  hash
+authorityKeyIdentifier = keyid,issuer
+keyUsage = critical, nonRepudiation, digitalSignature,keyEncipherment
+extendedKeyUsage = clientAuth, emailProtection
+
+[ crl_ext ]
+authorityKeyIdentifier=keyid:always
+
+[ ocsp ]
+basicConstraints = CA:FALSE
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid,issuer
+keyUsage = critical, digitalSignature
+extendedKeyUsage = critical, OCSPSigning
+
+
+inter = 192.168.1.58
+ca = 192.168.1.98
+www = 192.168.1.70
+
+
+openssl req -config ./openssl.cnf -new -sha256 -key intermediate/private/intermediate.key.pem -out intermediate/csr/intermediate.csr.pem
+
+scp intermediate/csr/intermediate.csr.pem root@ca:/opt/ca-w-inter/tmp/
+
+openssl ca -config openssl.cnf -name CA_root -extensions v3_intermediate_ca -days 3650 -notext -md sha256 -in tmp/intermediate.csr.pem -out tmp/intermediate.cert.pem
+
+scp tmp/intermediate.cert.pem root@192.168.1.58:/opt/ca-w-inter/intermediate/certs/
+
+scp root@ca:/opt/ca-w-inter/certs/ca.cert.pem intermediate/certs/
+
+cat intermediate/certs/intermediate.cert.pem intermediate/certs/ca.cert.pem > intermediate/certs/ca-chain.cert.pem
+
+scp root@192.168.1.58:/opt/ca-w-inter/intermediate/certs/ca-chain.cert.pem /etc/apache2/ssl/
+
+scp www-w-inter-cert.csr root@192.168.1.58:/opt/ca-w-inter/intermediate/csr/
+
+openssl ca -config openssl.cnf -name CA_inter -extensions server_cert -days 365 -notext -md sha256 -in intermediate/csr/www-w-inter-cert.csr -out intermediate/certs/www-w-inter-cert.pem
+
+scp /opt/ca-w-inter/intermediate/certs/www-w-inter-cert.pem root@192.168.1.70:/etc/apache2/ssl/
+
+scp root@192.168.1.98:/opt/ca-w-inter/certs/ca.cert.pem ./
+
+openssl genrsa -aes256 -out intermediate/private/ocsp-inter.ccicampus.local.key.pem 4096
+
+openssl req -config openssl.cnf -new -sha256 -key intermediate/private/ocsp-inter.ccicampus.local.key.pem -out intermediate/csr/ocsp-inter.ccicampus.local.csr.pem
+
+openssl ca -config openssl.cnf -name CA_inter -extensions ocsp -days 365 -notext -md sha256 -in intermediate/csr/ocsp-inter.ccicampus.local.csr.pem -out intermediate/certs/ocsp-inter.ccicampus.local.cert.pem
+
+scp www-w-inter-ocsp-cert.csr root@192.168.1.58:/opt/ca-w-inter/intermediate/csr/
+
+openssl ca -config openssl.cnf -name CA_inter -extensions server_cert -days 365 -notext -md sha256 -in intermediate/csr/www-w-inter-ocsp-cert.csr -out intermediate/certs/www-w-inter-ocsp-cert.pem
+
+scp root@192.168.1.58:/opt/ca-w-inter/intermediate/certs/www-w-inter-ocsp-cert.pem ./
+
+Néanmoins je suis arrivé jusqu'à la partie 6.2 Création du certificat pour Apache avec révocation. Il y a quelque chose que je ne comprends pas, peut-être l'un de vous aura la réponse.Page 21 il est demandé d'envoyer de créer un certificat de révocation sur www qu'on envoie sur inter pour le certifier et on doit le signer 
+et quand j'essaie de le signer, il me dit qu'il y a déjà un certificat, ce qui est logique vu qu'on en a fait plein. Et je sais que quand cela pose problème il suffit de supprimer le fichier index.txt à la racine de ca-w-inter et de le recréer ou de le vider et de refaire la commande.
+Mais ce que je ne comprend pas, c'est qu'il n'est pas possible de faire cohabiter ces deux certificats ? Il faut absolument en supprimer un pour délivrer l'autre ? Et surtout ce n'est écrit nul part donc à nous de le deviner.

@@ -1,0 +1,42 @@
+truenas c'est quoi, protocole d'echange
+
+shéma réseau deuxième ip (deux interface lan et wan)rputeur et mettre vpn
+version graphique et version core
+
+
+rend dificcile la prise d'information (vpn) bien détailler !
+
+license d'accès (cal) a ces services 
+
+mettre machine crée avant le oral 1
+
+
+ltsp : Selon la définition même du site Linux Terminal Server Project, LTSP est un paquet additionnel pour GNU/Linux qui permet de connecter de nombreuses stations clientes légères sur un serveur GNU/Linux. Les applications s'exécutent sur le serveur, les stations clientes envoient les signaux d'entrée de périphérique vers le serveur et affichent en retour le résultat donné par les applications.
+
+ltsp -binary : paquet necessaire au foncionnement de ltsp. ensemble paquet ipxe et
+Le concept de base veut que toute machine ayant une carte réseau puisse être utilisée comme client léger. Les architectures officiellement prises en charge sont les processeurs type Intel x86, AMD64 et PowerPC.
+
+
+Dnsmasq : est un relais DNS et un serveur DHCP léger et facile à configurer. Il est conçu pour fournir le service DNS et éventuellement le service DHCP à un petit réseau. Il peut fournir le nom de machines locales qui ne sont pas dans le catalogue DNS global.
+
+nfs-kernel-server : Le serveur NFS du noyau est actuellement le serveur NFS recommandé sous Linux, avec des fonctionnalités comme NFSv3 et NFSv4, la gestion de Kerberos par GSS et bien d'autres.Ce paquet contient la gestion en espace utilisateur du serveur NFS du noyau. La plupart des administrateurs qui veulent mettre en place un serveur NFS devraient installer ce paquet.
+
+openssh-server : Il s'agit d'une version portable de OpenSSH, l'implémentation libre du protocole SSH tel qu'il a été défini par par le groupe de travail « secsh » de l'IETF
+Ce paquet fournit le serveur sshd.
+
+net-tools : Ce paquet contient des outils importants pour contrôler le sous-système réseau du noyau Linux. Cela inclut arp, ifconfig, netstat, rarp, nameif et route. De plus, ce paquet contient des utilitaires qui touchent à la configuration d'équipements réseaux spécifiques (plipconfig, slattach, mii-tool) ainsi que des outils de configuration IP avancés (iptunnel, ipmaddr).
+
+Ethtool : peut chercher et changer les paramètres comme la vitesse, l'auto- négociation et le déchargement des sommes de contrôle (« checksum offload ») de nombreux périphériques de réseaux, en particulier les périphériques Ethernet.
+
+Epoptes :  est un outil de gestion et de surveillance de laboratoire informatique open source. Il permet la diffusion et la surveillance d’écran, l’exécution de commandes à distance, l’envoi de messages, l’imposition de restrictions telles que le verrouillage de l’écran ou la mise en sourdine du son des clients et bien plus encore!
+
+
+Question 2
+Recuperer un mot de passe utilisateur, on va pouvoir administrer un utilisateur et lui affecter un md
+
+
+Question 3 : A quoi correspond l’argument --proxy-dhcp=0 de la commande précédente ?
+Désactive le dhcp
+gpasswd -a <fevre> epoptes
+
+scp -r -p "D:\Machines Virtuelles Année 2\LTSP\SERVEUR/LTSP_SERV.vmdk" fevre@192.168.1.80:/home/roger/LTSP-Client-Lubuntu.vmdk

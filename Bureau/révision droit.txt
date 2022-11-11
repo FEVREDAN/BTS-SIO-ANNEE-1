@@ -1,0 +1,6 @@
+Qu'est-ce que le SI ? déf + 3 dimension du si + 4 fonctions
+
+CREATE TABLE QuestionsReponses (
+id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+question VARCHAR(100),
+reponse VARCHAR(100);

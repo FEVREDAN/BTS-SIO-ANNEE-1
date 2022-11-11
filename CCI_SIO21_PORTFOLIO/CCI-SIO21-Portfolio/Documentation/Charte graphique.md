@@ -1,4 +1,4 @@
-# 				                          			CHARTE GRAPHIQUE PORTFOLIO 
+# 				                          			CHARTE GRAPHIQUE PORTFOLIO
 
 
 - [1 - Personnalisation](#id-section1)
@@ -18,7 +18,7 @@
 - [- Maquette](#id-section15)
 ------
 
-#  <div id='id-section1'/>                                        1 - Personnalisation 
+#  <div id='id-section1'/>                                        1 - Personnalisation
 
 
 
@@ -49,8 +49,7 @@ Pour ce portfolio j'ai choisi la version Extra-bold 800 de la police OpenSans :
 
 # <div id='id-section5'/> 										2 - Contenu
 
-
-## <div id='id-section6'/> - Page d'accueil / Schéma
+- Page d'accueil / Schéma
 
 ![Page_accueil_schéma](./Images_charte_typora/Page_accueil_schéma.png)
 

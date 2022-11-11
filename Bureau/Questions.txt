@@ -1,0 +1,43 @@
+Que signifie SI ?
+Système d'information
+
+Comment définir SI ?
+Un ensemble organisé de ressources 
+permettant de traiter et stocker des informations dans et entre organisatons.
+
+Combien de dimensions comporte le si ? et quelles sont elles ?
+Dimension technique = système informatique composé de ressources matérielles et immatérielles.
+Dimension humaine = ressources qui traitent l'info, donne du sens et transforme en connaissance à gerer.
+Dimension organisationnelle = ensemble de process,règles, pour collecter,mémorisé,traiter et diffuser l'info.
+
+Combien de fonctions comporte le SI et quelles sont elles ?
+Collecte
+traitement
+Diffusion
+Mémorisation
+
+Que signifie CRM ?
+Customer relationship management
+
+Que signifie ERP ?
+Entreprise ressources planning
+
+Que signifie SRM ?
+Supllier relationship management
+
+Que signifie PDM ?
+Product data management
+
+Que signifie PLM ?
+Product lifecycle management
+
+La coordination du travail se fait par ajustement mutuel et par la supervision directe,
+Définir ces deux termes.
+
+Mutuel = directement entre les salariés, comm informelle
+Directe = par une personne qui donnes des ordres et controles leur travail
+
+Mais également avec la standardisation des : 4 réponses attendu
+Des procédés du travail, des résultats, des qualifications, des normes.
+
+Quels sont les opportunités liées au SI ?

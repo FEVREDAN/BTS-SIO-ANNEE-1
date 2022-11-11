@@ -1,0 +1,74 @@
+différence hub et switch
+
+un hub prend la première entrée puis la distribue et seulement ensuite prend la deuxième
+un switch split l'information
+
+Commande mode privilègier vers les autres : (https://www-npa.lip6.fr/~fourmaux/www-l2ti.univ-paris13.fr/~fourmaux/stages/routeurcisco/site%20web%20Cisco/man_9.htm)
+mdp : cisco , cisco2 , cisco3
+
+Aide mémoire cisco :
+https://www.numelion.com/commandes-commutateurs-cisco.html#mot_passe_exec
+changer ip : https://www.numelion.com/commandes-routeurs-cisco.html#configuration-routeur-interface
+Tâche 2 :
+
+1.Configurez le nom d’hôte du routeur.(https://www.numelion.com/commandes-routeurs-cisco.html#configuration-routeur)
+Router>enable : permet de passer en mode d’exécution privilégié.
+Router#config t : Passez en mode de configuration globale.
+Router(config)#hostname R1 : Appliquez un nom d’hôte unique au routeur.
+
+
+2.Désactiver le "domain-lookup" (recherche DNS) (https://www.it-connect.fr/desactiver-la-recherche-dns-sur-un-routeur-cisco/)
+Aller dans le mode CLI puis tapez :
+enable (ou en)
+conf terminal
+no ip domain-lookup
+pour désactiver l'option pour les lignes distantes 'vty' :
+line vty 0 5 
+no ip domain-lookup
+exit
+
+3.Configurez un mot de passe de mode d’exécution privilégié.(https://www.numelion.com/commandes-commutateurs-cisco.html#mot_passe_exec)
+Comm1#configure terminal : Passer du mode d’exécution privilégié au mode de configuration globale.
+Comm1(config)#enable secret mot_de_passe : Configurer le mot de passe enable secret pour le passage en mode d’exécution privilégié.
+Comm1(config)#end : Quitter le mode de configuration de ligne et revenir en mode d’exécution privilégié.
+
+
+
+
+4.Configurez une bannière de message du jour (motd / connection / exec).(https://www.manageengine.com/fr/network-configuration-manager/configlets/configure-banner-cisco.html)
+Passez en mode config:
+configure terminal
+Passez en mode config.:
+banner motd #message a afficher#
+Quitter le mode de configuration:
+exit
+Copiez la configuration en cours dans la configuration de démarrage à l'aide de la commande ci-dessous:
+write memory
+
+5.Configurez un mot de passe pour les connexions console:(https://www.it-connect.fr/definir-un-mot-de-passe-sur-un-materiel-cisco%EF%BB%BF/)
+enable (ou en)
+conf terminal (ou configure terminal)
+enable password motdepasseamettre
+exit
+
+6.Configurez un mot de passe pour les connexions VTY:(https://ping.fr1.co/t16-configuration-des-mots-de-passe-dun-routeur-cisco)
+enable
+configure terminal
+line vty 0 4
+login
+
+password motdepasseamettre
+
+
+Tâche 3 :
+étape 1 : config t (Passez en mode de configuration globale.)
+R1(config)#interface "nominterface" : passez au mode de configuration d’interface en indiquant le type et le numéro d’interface.
+R1(config-if)#ip address "ip" "mask" : Configurez l’adresse IP et le masque de sous-réseau.
+R1(config-if)#description Ciruit#VBN32696-123 (help desk:1-800-555-1234) : donner une descritpion de l’interface.
+
+étape 2:
+Au démarrage du routeur (ou à la base) commande "show ip interface brief" pour voir si ip bonne et up ou down
+si up ok si down (pour l'instant solution = aller onglet config et cocher "on") 
+ensuite retour base cli puis :
+Routeur# copy running-config startup-config
+Routeur# write
