@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="AP3" company="" webLink="http://" view-date="2022-09-01" view-index="0" gantt-divider-location="547" resource-divider-location="300" version="3.2.3246" locale="fr_FR">
+<?xml version="1.0" encoding="UTF-8"?><project name="AP3" company="" webLink="http://" view-date="2022-09-01" view-index="0" gantt-divider-location="532" resource-divider-location="300" version="3.2.3246" locale="fr_FR">
     <description/>
     <view zooming-state="default:8" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="312" order="0"/>
-        <field id="tpd4" name="Date de début" width="84" order="1"/>
-        <field id="tpd5" name="Date de fin" width="135" order="2"/>
+        <field id="tpd3" name="Nom" width="303" order="0"/>
+        <field id="tpd4" name="Date de début" width="82" order="1"/>
+        <field id="tpd5" name="Date de fin" width="131" order="2"/>
         <option id="filter.completedTasks" value="false"/>
         <timeline>
             <![CDATA[0]]>
@@ -60,7 +60,7 @@
                 </task>
                 <task id="26" name="Configuration AD, DNS, DHCP, RADIUS" color="#8cb6ce" meeting="false" start="2022-10-22" duration="13" complete="0" thirdDate="2022-10-05" thirdDate-constraint="0" expand="true"/>
                 <task id="32" name="QCM1" color="#8cb6ce" meeting="true" start="2022-11-04" duration="0" complete="0" thirdDate="2022-09-01" thirdDate-constraint="0" expand="true"/>
-                <task id="20" name="Instalation PFSense 1, 2, 3, 4" color="#8cb6ce" meeting="false" start="2022-11-08" duration="3" complete="0" thirdDate="2022-10-05" thirdDate-constraint="0" expand="true">
+                <task id="20" name="Instalation PFSense 1, 2" color="#8cb6ce" meeting="false" start="2022-11-08" duration="3" complete="0" thirdDate="2022-10-05" thirdDate-constraint="0" expand="true">
                     <depend id="21" type="2" difference="0" hardness="Strong"/>
                 </task>
                 <task id="21" name="Configuration PFSense + redondance" color="#8cb6ce" meeting="false" start="2022-11-11" duration="3" complete="0" thirdDate="2022-10-05" thirdDate-constraint="0" expand="true">
